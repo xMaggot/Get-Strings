@@ -11,8 +11,6 @@ from io import BytesIO
 from PIL import Image, ImageTk
 import customtkinter
 from tkinter import *
-import customtkinter
-from PIL import Image, ImageTk
 
 def extract_strings():
     if not pe_file:
