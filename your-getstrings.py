@@ -92,10 +92,10 @@ root.title("NAME Program")
 icon_url = "https://yoururl/logo.ico" ##### URL .ICO 
 icon = fetch_icon(icon_url)
 root.iconphoto(True, icon)
-img_fundo = fetch_image("https://yourbackground/background.png") ##### URL .PNG
+img_bg = fetch_image("https://yourbackground/background.png") ##### URL .PNG
 
-lab_fundo = Label(root, image=img_fundo)
-lab_fundo.pack()
+lab_bg = Label(root, image=img_bg)
+lab_bg.pack()
 
 button = customtkinter.CTkButton(master=root, width=80, height=25, text="SEARCH", fg_color="#100811", text_color="white", corner_radius=15, hover_color="#8500B2", border_width=1, border_color="white", command=browse_file)
 button.place(relx=0.85, rely=0.1, anchor=CENTER)
