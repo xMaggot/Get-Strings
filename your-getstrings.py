@@ -11,6 +11,8 @@ from io import BytesIO
 from PIL import Image, ImageTk
 import customtkinter
 from tkinter import *
+import customtkinter
+from PIL import Image, ImageTk
 
 def extract_strings():
     if not pe_file:
@@ -86,22 +88,22 @@ root.config(bg="black")
 root.minsize(width, height)
 root.maxsize(width, height)
 root.resizable(width=False, height=False)
-root.title("NAME Program")
-icon_url = "https://yoururl/logo.ico" ##### URL .ICO 
+root.title("YOUR NAME APP")
+icon_url = "https://cdn.discordapp.com/attachments/" ##URL .ICO
 icon = fetch_icon(icon_url)
 root.iconphoto(True, icon)
-img_bg = fetch_image("https://yourbackground/background.png") ##### URL .PNG
+img_fundo = fetch_image("https://cdn.discordapp.com/attachments/") ##### URL .PNG
 
-lab_bg = Label(root, image=img_bg)
-lab_bg.pack()
+lab_fundo = Label(root, image=img_fundo)
+lab_fundo.pack()
 
-button = customtkinter.CTkButton(master=root, width=80, height=25, text="SEARCH", fg_color="#100811", text_color="white", corner_radius=15, hover_color="#8500B2", border_width=1, border_color="white", command=browse_file)
+button = customtkinter.CTkButton(master=root, width=80, height=25, text="SEARCH", fg_color="#100811", text_color="white", corner_radius=0, hover_color="red", border_width=1, border_color="white", command=browse_file)
 button.place(relx=0.85, rely=0.1, anchor=CENTER)
 
-button = customtkinter.CTkButton(master=root, width=80, height=25, text="STRING", fg_color="#100811", text_color="white", corner_radius=15, hover_color="#8500B2", border_width=1, border_color="white", command=extract_strings)
+button = customtkinter.CTkButton(master=root, width=80, height=25, text="STRING", fg_color="#100811", text_color="white", corner_radius=0, hover_color="red", border_width=1, border_color="white", command=extract_strings)
 button.place(relx=0.85, rely=0.22, anchor=CENTER)
 
 result_text = tk.Text(root, wrap=tk.WORD, state=tk.DISABLED, height=8, width=43, bg="black", fg="white", font=("Calibri", 12))
-result_text.place(x=226, y=81)
+result_text.place(x=140, y=95)
 
 root.mainloop()
